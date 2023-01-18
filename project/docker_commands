@@ -1,0 +1,57 @@
+# Docker commands
+
+In to start the image run `make start`
+
+## Docker commands used to build the application
+
+docker build --tag techtrends ./techtrends
+
+## Docker commands used to run the application
+
+docker run -d -p 7111:3111 techtrends:latest
+
+## Docker commands used to get the application logs
+
+docker logs 5bca6d3ecbfb -f
+
+## Logs from the container running the TechTrends application
+
+```sh
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+INFO:werkzeug: * Running on http://10.10.10.0:3111/ (Press CTRL+C to quit)
+INFO:app:Landing page visited - - ['01/17/2023, 10:46:35']
+INFO:werkzeug:10.10.10.10 - - [17/Jan/2023 10:46:35] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:10.10.10.10 - - [17/Jan/2023 10:46:36] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:10.10.10.10 - - [17/Jan/2023 10:46:36] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:app:Status Okay
+INFO:app:retrieved '2020 CNCF Annual Report' successfully - - ['01/17/2023, 10:46:39']
+INFO:werkzeug:10.10.10.10 - - [17/Jan/2023 10:46:39] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:10.10.10.10 - - [17/Jan/2023 10:46:39] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:About Page request was successful - - ['01/17/2023, 10:46:44']
+INFO:werkzeug:10.10.10.10 - - [17/Jan/2023 10:46:44] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:10.10.10.10 - - [17/Jan/2023 10:46:44] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:10.10.10.10 - - [17/Jan/2023 10:46:45] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:10.10.10.10 - - [17/Jan/2023 10:46:45] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:created 'This is A new tech post' post successfully - - ['01/17/2023, 10:47:33']
+INFO:werkzeug:10.10.10.10 - - [17/Jan/2023 10:47:33] "POST /create HTTP/1.1" 302 -
+INFO:app:Landing page visited - - ['01/17/2023, 10:47:33']
+INFO:werkzeug:10.10.10.10 - - [17/Jan/2023 10:47:33] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:10.10.10.10 - - [17/Jan/2023 10:47:33] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:Status Okay
+INFO:app:retrieved 'Kubernetes v1.20 Release Notes' successfully - - ['01/17/2023, 10:47:38']
+INFO:werkzeug:10.10.10.10 - - [17/Jan/2023 10:47:38] "GET /3 HTTP/1.1" 200 -
+INFO:werkzeug:10.10.10.10 - - [17/Jan/2023 10:47:38] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:Landing page visited - - ['01/17/2023, 10:47:39']
+INFO:werkzeug:10.10.10.10 - - [17/Jan/2023 10:47:39] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:10.10.10.10 - - [17/Jan/2023 10:47:39] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:Status Okay
+INFO:app:retrieved 'This is A new tech post' successfully - - ['01/17/2023, 10:47:44']
+INFO:werkzeug:10.10.10.10 - - [17/Jan/2023 10:47:44] "GET /7 HTTP/1.1" 200 -
+INFO:werkzeug:10.10.10.10 - - [17/Jan/2023 10:47:44] "GET /static/css/main.css HTTP/1.1" 304 -
+```
