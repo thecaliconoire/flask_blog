@@ -2,12 +2,10 @@ FROM python:3.8
 
 EXPOSE 3111
 
-COPY . /app
+COPY techtrends /app
 
 WORKDIR /app
 
-RUN pip3 install -r requirements.txt
-
-RUN python init_db.py
+RUN pip3 install -r requirements.txt && python init_db.py
 
 CMD ["python", "app.py"]
