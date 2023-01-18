@@ -26,7 +26,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          file: /techtrends/Dockerfile
+          file: project/techtrends/Dockerfile
           platforms: linux/amd64
           push: true
           tags: ${{ secrets.DOCKER_REPO }}:test_1
