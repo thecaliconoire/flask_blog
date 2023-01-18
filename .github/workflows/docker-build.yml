@@ -29,4 +29,4 @@ jobs:
           file: project/techtrends/Dockerfile
           platforms: linux/amd64
           push: true
-          tags: ${{ secrets.DOCKER_REPO }}:test_1
+          tags: ${{ secrets.DOCKER_REPO }}:latest
