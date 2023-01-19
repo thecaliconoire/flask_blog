@@ -16,8 +16,8 @@ spec:
         version: v01
     spec:
       containers:
-        - name: {{ .Values.image.techtrends }}
-          image: {{ .Values.image.techtrends }}:{{ .Values.image.tag }}
+        - name: {{ .Values.image.repository }}
+          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
           ports:
             - containerPort: {{ .Values.containerPort }}
               protocol: TCP
