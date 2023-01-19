@@ -1,0 +1,10 @@
+namespace: prod
+servicePort: 7111
+replicaCount: 5
+resources:
+  requests:
+    memory: "128Mi"
+    CPU: "350Mi"
+  limits:
+    memory: "256Mi"
+    CPU: "500m"
