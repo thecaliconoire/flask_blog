@@ -7,7 +7,7 @@ service:
   type: ClusterIP
 
 image:
-  repository: techtrends
+  repository: claytonanzalone/techtrends
   tag: latest
   pullPolicy: ifNotPresent
 
