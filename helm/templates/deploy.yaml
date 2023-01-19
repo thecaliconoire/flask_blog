@@ -17,7 +17,8 @@ spec:
     spec:
       containers:
         - name: {{ .Values.image.repository }}
-          image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+          image:  claytonanzalone/{{ .Values.image.repository }}:{{ .Values.image.tag }}
+          imagePullPolicy: {{ Values.image.PullPolicy }}
           ports:
             - containerPort: {{ .Values.containerPort }}
               protocol: TCP
